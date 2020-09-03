@@ -61,7 +61,7 @@ Widget moneyList(var context) {
   return Container(
     width: 100,
     margin: EdgeInsets.only(top: 25),
-    height: MediaQuery.of(context).size.height / 4.5,
+    height: 190,
     child: Swiper(
       itemCount: 3,
       itemBuilder: (_, i) {
