@@ -3,9 +3,11 @@ import 'package:percent_indicator/linear_percent_indicator.dart';
 
 Widget monthlyExpense(context) {
   return Container(
-    height: 500,
+    height: 450,
     width: double.infinity,
     child: Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+
       children: [
         Padding(
           padding: const EdgeInsets.only(left: 30, top: 40),
