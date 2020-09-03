@@ -102,13 +102,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.7.0"
-  scroll_snap_list:
+  percent_indicator:
     dependency: "direct main"
     description:
-      name: scroll_snap_list
+      name: percent_indicator
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.4.1"
+    version: "2.1.5"
   sky_engine:
     dependency: transitive
     description: flutter

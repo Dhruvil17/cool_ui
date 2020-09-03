@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 Widget usage(){
   return Container(
     height: 50,
-    margin: EdgeInsets.fromLTRB(30, 20, 30, 0),
+    margin: EdgeInsets.fromLTRB(30, 45, 30, 0),
     child: Row(
       children: [
         usageBox("₹ 2450", "Spending",Color(0xffD9D4FD)),
