@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'scrollingOrder.dart';
+import 'package:cool_ui/travelcard.dart';
 
 class second extends StatefulWidget {
   static const id = "second";
@@ -39,7 +40,9 @@ class LiveTracking extends StatelessWidget {
             style: t(Colors.black, 20, FontWeight.bold),
           ),
         ),
-        SizedBox(height: 15,),
+        SizedBox(
+          height: 15,
+        ),
         Container(
           decoration: BoxDecoration(
             boxShadow: [
@@ -49,8 +52,11 @@ class LiveTracking extends StatelessWidget {
               ),
             ],
           ),
-            child: Image.asset("images/map.PNG"),),
-        SizedBox(height: 30,),
+          child: Image.asset("images/map.PNG"),
+        ),
+        SizedBox(
+          height: 30,
+        ),
         Container(
           margin: EdgeInsets.only(left: 30),
           child: Text(
@@ -58,11 +64,16 @@ class LiveTracking extends StatelessWidget {
             style: t(Colors.black, 20, FontWeight.bold),
           ),
         ),
-        SizedBox(height: 30,),
+        SizedBox(
+          height: 30,
+        ),
+        travelCard(),
       ],
     );
   }
 }
+
+
 
 TextStyle t(Color color, double fontSize, var fontWeight) {
   return TextStyle(

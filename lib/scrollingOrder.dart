@@ -90,6 +90,12 @@ class tripCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
+        boxShadow: [
+          BoxShadow(
+            color: Colors.grey,
+            blurRadius: 10,
+          ),
+        ],
           color: Color(0xffFFFFFF),
           borderRadius: BorderRadius.circular(30),
           border: Border.all(
