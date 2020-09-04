@@ -100,7 +100,15 @@ Widget orderTile(String name, String id, String unknown,String cost,Color color)
                       Container(
                         child: Row(
                           children: [
-                            //TODO:
+                            Container(
+                              height: 5,
+                              width: 5,
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                color: color,
+                              ),
+                            ),
+                            SizedBox(width: 5,),
                             Text(
                               unknown,
                               style: TextStyle(

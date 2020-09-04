@@ -17,37 +17,65 @@ class _firstPageState extends State<firstPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: BottomNavigationBar(
-          type: BottomNavigationBarType.fixed,
-          items: [
+      bottomNavigationBar:
+          BottomNavigationBar(type: BottomNavigationBarType.fixed, items: [
         BottomNavigationBarItem(
-          icon: Icon(Icons.home,color: Colors.blue,),
-          title: Text("Home",style: TextStyle(color: Colors.black),),
+          icon: Icon(
+            Icons.home,
+            color: Colors.blue,
+          ),
+          title: Text(
+            "Home",
+            style: TextStyle(color: Colors.black),
+          ),
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.trip_origin,color: Colors.grey,),
-          title: Text("Trip",style: TextStyle(color: Colors.black),),
+          icon: Icon(
+            Icons.trip_origin,
+            color: Colors.grey,
+          ),
+          title: Text(
+            "Trip",
+            style: TextStyle(color: Colors.black),
+          ),
         ),
         BottomNavigationBarItem(
-          icon:Icon(Icons.person,color: Colors.grey,),
-          title: Text("Driver",style: TextStyle(color: Colors.black),),
+          icon: Icon(
+            Icons.person,
+            color: Colors.grey,
+          ),
+          title: Text(
+            "Driver",
+            style: TextStyle(color: Colors.black),
+          ),
         ),
         BottomNavigationBarItem(
-          icon:Icon(Icons.directions_bus,color: Colors.grey,),
-          title: Text("Vehicle",style: TextStyle(color: Colors.black),),
+          icon: Icon(
+            Icons.directions_bus,
+            color: Colors.grey,
+          ),
+          title: Text(
+            "Vehicle",
+            style: TextStyle(color: Colors.black),
+          ),
         ),
         BottomNavigationBarItem(
-          icon:Icon(Icons.location_searching,color: Colors.grey,),
-          title: Text("Track",style: TextStyle(color: Colors.black),),
+          icon: Icon(
+            Icons.location_searching,
+            color: Colors.grey,
+          ),
+          title: Text(
+            "Track",
+            style: TextStyle(color: Colors.black),
+          ),
         ),
       ]),
       floatingActionButton: Container(
         decoration: BoxDecoration(
-          border: Border.all(color: Colors.white,width: 3),
-          borderRadius: BorderRadius.circular(30)
-        ),
+            border: Border.all(color: Colors.white, width: 3),
+            borderRadius: BorderRadius.circular(30)),
         child: FloatingActionButton(
-          onPressed: () {  },
+          onPressed: () {},
           child: Icon(Icons.add),
         ),
       ),
@@ -111,20 +139,23 @@ class appBar extends StatelessWidget {
                       color: Colors.black,
                     ),
                   ),
-                  Container(
-                    child: Center(
-                      child: Text(
-                        "6",
-                        style: TextStyle(color: Colors.white),
+                  Transform.translate(
+                    offset: Offset(-4, -6),
+                    child: Container(
+                      child: Center(
+                        child: Text(
+                          "6",
+                          style: TextStyle(color: Colors.white),
+                        ),
                       ),
-                    ),
-                    margin: EdgeInsets.only(bottom: 2),
-                    alignment: Alignment.topRight,
-                    height: 18,
-                    decoration: BoxDecoration(
-                      border: Border.all(color: Colors.white),
-                      shape: BoxShape.circle,
-                      color: Colors.blue.shade700,
+                      margin: EdgeInsets.only(bottom: 2),
+                      alignment: Alignment.topRight,
+                      height: 18,
+                      decoration: BoxDecoration(
+                        border: Border.all(color: Colors.white),
+                        shape: BoxShape.circle,
+                        color: Colors.blue.shade700,
+                      ),
                     ),
                   ),
                 ],

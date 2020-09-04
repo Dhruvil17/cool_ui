@@ -20,6 +20,7 @@ Widget monthlyExpense(context) {
             ),
           ),
         ),
+        SizedBox(height: 30,),
         expenseCardsCore(context),
       ],
     ),
