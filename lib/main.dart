@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      initialRoute: second.id,
+      initialRoute: firstPage.id,
       routes: {
         second.id:(context)=>second(),
         firstPage.id: (context)=>firstPage(),

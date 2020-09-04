@@ -1,5 +1,55 @@
 import 'package:flutter/material.dart';
 import 'second.dart';
+
+class LiveTracking extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        SizedBox(
+          height: 30,
+        ),
+        Container(
+          margin: EdgeInsets.only(left: 30),
+          child: Text(
+            "Live Tracking",
+            style: t(Colors.black, 20, FontWeight.bold),
+          ),
+        ),
+        SizedBox(
+          height: 15,
+        ),
+        Container(
+          decoration: BoxDecoration(
+            boxShadow: [
+              BoxShadow(
+                color: Colors.grey,
+                blurRadius: 19,
+              ),
+            ],
+          ),
+          child: Image.asset("images/map.PNG"),
+        ),
+        SizedBox(
+          height: 30,
+        ),
+        Container(
+          margin: EdgeInsets.only(left: 30),
+          child: Text(
+            "Details",
+            style: t(Colors.black, 20, FontWeight.bold),
+          ),
+        ),
+        SizedBox(
+          height: 30,
+        ),
+        travelCard(),
+      ],
+    );
+  }
+}
+
 class travelCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

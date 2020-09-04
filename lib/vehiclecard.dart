@@ -1,35 +1,6 @@
 import 'package:flutter/material.dart';
-import 'expenseCard.dart';
-import 'scrollingOrder.dart';
-import 'package:cool_ui/travelcard.dart';
-import 'package:cool_ui/vehiclecard.dart';
-
-class second extends StatefulWidget {
-  static const id = "second";
-  @override
-  _secondState createState() => _secondState();
-}
-
-class _secondState extends State<second> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: SafeArea(
-        child: ListView(
-          children: [
-            scrollingDesign(),
-            LiveTracking(),
-            expenseBreakdown(),
-            VehicleCard(),
-            driverCard(),
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-class driverCard extends StatelessWidget {
+import 'second.dart';
+class VehicleCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -38,7 +9,7 @@ class driverCard extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            "Driver Details",
+            "Expense Breakdown",
             style: t(Colors.black, 20, FontWeight.bold),
           ),
           SizedBox(
@@ -52,18 +23,16 @@ class driverCard extends StatelessWidget {
                   flex: 1,
                   child: Padding(
                     padding: const EdgeInsets.all(5.0),
-                    child: Image.asset("images/person.png"),
+                    child: Image.asset("images/truck.png"),
                   ),
                 ),
                 Expanded(
                   flex: 3,
                   child: Padding(
-                    padding: const EdgeInsets.only(top: 15.0),
+                    padding: const EdgeInsets.only(top : 15.0),
                     child: Row(
                       children: [
-                        SizedBox(
-                          width: 20,
-                        ),
+                        SizedBox(width: 20,),
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
@@ -71,16 +40,15 @@ class driverCard extends StatelessWidget {
                               child: Padding(
                                 padding: const EdgeInsets.all(4.0),
                                 child: FittedBox(
-                                  child: Text(
-                                    "KA 02M 2021",
-                                    style: t(Colors.black, 20, FontWeight.bold),
+                                  child: Text("KA 02M 2021",
+                                    style: t(Colors.black,20,FontWeight.bold),
                                   ),
                                 ),
                               ),
                               height: 28,
-                              width: MediaQuery.of(context).size.width / 3,
+                              width: MediaQuery.of(context).size.width/3,
                               decoration: BoxDecoration(
-                                color: Colors.green.withOpacity(0.2),
+                                color: Colors.red.withOpacity(0.3),
                                 borderRadius: BorderRadius.circular(7),
                               ),
                             ),
@@ -91,11 +59,20 @@ class driverCard extends StatelessWidget {
                               crossAxisAlignment: CrossAxisAlignment.end,
                               children: [
                                 Text(
-                                  "+91 - 1234567890",
+                                  "Total Km",
+                                  style: t(
+                                      Colors.black,
+                                      10,
+                                      FontWeight.w400
+                                  ),
+                                ),
+
+                                Text(
+                                  "  45,452",
                                   style: t(
                                     Colors.black,
                                     15,
-                                    FontWeight.w500,
+                                    FontWeight.bold,
                                   ),
                                 ),
                               ],
@@ -103,16 +80,6 @@ class driverCard extends StatelessWidget {
                           ],
                         ),
                       ],
-                    ),
-                  ),
-                ),
-                Expanded(
-                  child: Center(
-                    child: FittedBox(
-                      child: Text(
-                        "Call",
-                        style: t(Colors.green.shade700, 17, FontWeight.w500),
-                      ),
                     ),
                   ),
                 ),
@@ -136,14 +103,4 @@ class driverCard extends StatelessWidget {
   }
 }
 
-double getWidth(var context, double percent) {
-  return (MediaQuery.of(context).size.width - 60) * percent;
-}
 
-TextStyle t(Color color, double fontSize, var fontWeight) {
-  return TextStyle(
-    fontSize: fontSize,
-    fontWeight: fontWeight,
-    color: color,
-  );
-}

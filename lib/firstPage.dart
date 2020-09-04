@@ -6,6 +6,7 @@ import 'package:flutter/rendering.dart';
 import 'orders.dart';
 import 'usageFile.dart';
 import 'reminder.dart';
+import 'second.dart';
 
 class firstPage extends StatefulWidget {
   static const id = "firstPage";
@@ -75,7 +76,9 @@ class _firstPageState extends State<firstPage> {
             border: Border.all(color: Colors.white, width: 3),
             borderRadius: BorderRadius.circular(30)),
         child: FloatingActionButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pushNamed(context, second.id);
+          },
           child: Icon(Icons.add),
         ),
       ),
